@@ -19,10 +19,10 @@
             <div id="search">
                 <form action="get_data.php" method="get">
                     Miasto: <input type="text" name="miasto">
-                    Rodzaj: <select name="rodzaj">
-                        <option value="nowoczesna">nowoczesna</option>
-                        <option value="klasyczna">klasyczna</option>
-                        <option value="historyczna">historyczna</option>
+                    Rodzaj planu: <select name="rodzaj">
+                        <option value="nowoczesna">nowoczesny</option>
+                        <option value="klasyczna">klasyczny</option>
+                        <option value="historyczna">historyczny</option>
                         <option value="koscioly">kościoły</option>
                     </select>
                     Rodzaj posiłku: <select name="rodzajposilku">
@@ -31,7 +31,7 @@
                         <option value="wegetarianski">wegetariański</option>
                         <option value="weganski">wegański</option>
                         <option value="dietetyczny">dietetyczny</option>
-                    </select>
+                    </select><br/>
                     Początek: <input type="time" name="start" value="<?php echo date('H:i'); ?>" />
                     Koniec: <input type="time" name="end" value="<?php echo date('H:i'); ?>" />
                     <input type="submit" value="Wyszukaj">

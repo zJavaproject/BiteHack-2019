@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .cookies{
@@ -27,15 +28,16 @@ header{
     text-align: center;
     float: none;
     display: block;
+    clear: both;
 }
 
 #search-box {
     margin: 250px;
     width: auto;
-    border: 2px black;
+    border: none;
     border-style: solid;
-    border-radius: 5px;
-    background-color: rgb(145, 187, 255, 0.5);
+    border-radius: 75px;
+    background-color: rgba(208, 223, 247, 0.76);
     clear: both;
     text-align: center;
     width: auto;
@@ -44,17 +46,24 @@ header{
 #search {
     text-align: center;
     clear: both;
+    margin: 2% auto;
 }
 
 #footer-box {
     display: block;
-    margin: auto;
+    margin: 0 0;
     width: 100%;
     position: relative;
     bottom: 0;
     clear: both;
     text-align: center;
+    padding: 0;
 }
 
-
-
+input {
+    border: 1px, solid, black;
+    border-radius: 50px;
+    height: 25px;
+    padding: 0 10px;
+    font-family: Helvetica, Arial, sans-serif; 
+}
