@@ -1,0 +1,47 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>DayTripper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="cookies"></div>
+    <div id="content">
+        <header>
+            
+        </header>
+
+        <div id="search-box">
+            <div id="search">
+                <form action="get_data.php" method="get">
+                    Miasto: <input type="text" name="miasto">
+                    Rodzaj planu: <select name="rodzaj">
+                        <option value="nowoczesna">nowoczesny</option>
+                        <option value="klasyczna">klasyczny</option>
+                        <option value="historyczna">historyczny</option>
+                        <option value="koscioly">kościoły</option>
+                    </select>
+                    Rodzaj posiłku: <select name="rodzajposilku">
+                        <option value="brak">Brak posiłku</option>
+                        <option value="standardowy">standardowy</option>
+                        <option value="wegetarianski">wegetariański</option>
+                        <option value="weganski">wegański</option>
+                        <option value="dietetyczny">dietetyczny</option>
+                    </select><br/>
+                    Początek: <input type="time" name="start" value="<?php echo date('h:i'); ?>" />
+                    Koniec: <input type="time" name="end" value="<?php echo date('H:i'); ?>" />
+                    <input type="submit" value="Wyszukaj">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer-box">
+                <p>Copyright 2019 by zJava-Project</p>
+                <p>Background photo by rawpixel on Unsplash</p>
+            </div>
+</body>
+</html>
