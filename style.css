@@ -23,23 +23,37 @@ header{
 }
 
 #content {
-    position: absolute;
+    position: relative;
     text-align: center;
+    float: none;
+    display: block;
+}
+
+#search-box {
+    margin: 250px;
+    width: auto;
+    border: 2px black;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: rgb(145, 187, 255, 0.5);
+    clear: both;
+    text-align: center;
+    width: auto;
 }
 
 #search {
-    margin: 0 auto;
-    border: 2px;
-    width: 100%;
     text-align: center;
-    
+    clear: both;
 }
 
-.footer-box {
+#footer-box {
+    display: block;
     margin: auto;
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    clear: both;
+    text-align: center;
 }
 
 

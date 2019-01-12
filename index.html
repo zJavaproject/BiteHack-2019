@@ -15,34 +15,33 @@
             
         </header>
 
-        <div id="search">
-            <form action="get_data.php" method="get">
-				Miasto: <input type="text" name="miasto">
-				Rodzaj: <select name="rodzaj">
-					<option value="nowoczesna">nowoczesna</option>
-					<option value="klasyczna">klasyczna</option>
-					<option value="historyczna">historyczna</option>
-					<option value="koscioly">kościoły</option>
-				</select>
-				Rodzaj posiłku: <select name="rodzajposilku">
-					<option value="brak">Brak posiłku</option>
-					<option value="standardowy">standardowy</option>
-					<option value="wegetarianski">wegetariański</option>
-					<option value="weganski">wegański</option>
-					<option value="dietetyczny">dietetyczny</option>
-				</select>
-				Początek: <input type="time" name="start" value="<?php echo date('H:i'); ?>" />
-				Koniec: <input type="time" name="end" value="<?php echo date('H:i'); ?>" />
-				<input type="submit" value="Wyszukaj">
-			</form>
+        <div id="search-box">
+            <div id="search">
+                <form action="get_data.php" method="get">
+                    Miasto: <input type="text" name="miasto">
+                    Rodzaj: <select name="rodzaj">
+                        <option value="nowoczesna">nowoczesna</option>
+                        <option value="klasyczna">klasyczna</option>
+                        <option value="historyczna">historyczna</option>
+                        <option value="koscioly">kościoły</option>
+                    </select>
+                    Rodzaj posiłku: <select name="rodzajposilku">
+                        <option value="brak">Brak posiłku</option>
+                        <option value="standardowy">standardowy</option>
+                        <option value="wegetarianski">wegetariański</option>
+                        <option value="weganski">wegański</option>
+                        <option value="dietetyczny">dietetyczny</option>
+                    </select>
+                    Początek: <input type="time" name="start" value="<?php echo date('H:i'); ?>" />
+                    Koniec: <input type="time" name="end" value="<?php echo date('H:i'); ?>" />
+                    <input type="submit" value="Wyszukaj">
+                </form>
+            </div>
         </div>
-
-        <footer>
-            <div class="footer-box">
+    </div>
+    <div id="footer-box">
                 <p>Copyright 2019 by zJava-Project</p>
                 <p>Background photo by rawpixel on Unsplash</p>
             </div>
-        </footer>
-    </div>
 </body>
 </html>
