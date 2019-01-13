@@ -17,14 +17,18 @@
 
         <div id="search-box">
             <div id="search">
-                <form action="get_data.php" method="get">
+                <form action="search.php" method="get">
                     Miasto: <input type="text" name="miasto">
                     Rodzaj planu: <select name="rodzaj">
-                        <option value="nowoczesna">nowoczesny</option>
-                        <option value="klasyczna">klasyczny</option>
-                        <option value="historyczna">historyczny</option>
-                        <option value="koscioly">kościoły</option>
-                    </select>
+                        <option value="fun">rozrywkowy</option>
+                        <option value="nature">blisko natury</option>
+                        <option value="art">art</option>
+						<option value="night">nocne życie</option>
+                        <option value="beauty">SPA tour</option>
+						<option value="shopaholic">zakupoholik</option>
+						<option value="religion">strefa sacrum</option>
+						<option value="monuments">historyczny</option>
+                    </select>							
                     Rodzaj posiłku: <select name="rodzajposilku">
                         <option value="brak">brak posiłku</option>
                         <option value="standardowy">standardowy</option>

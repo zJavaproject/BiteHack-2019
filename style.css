@@ -103,6 +103,7 @@ select {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 20px;
     position: relative;
+	text-transform: uppercase;
 }
 
 #plan {
