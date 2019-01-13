@@ -6,7 +6,6 @@
     <title>DayTripper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <div class="cookies"></div>
@@ -23,7 +22,7 @@
                         <option value="fun">rozrywkowy</option>
                         <option value="nature">blisko natury</option>
                         <option value="art">art</option>
-						<option value="night">nocne życie</option>
+						<option value="night">Smaczny kąsek</option>
                         <option value="beauty">SPA tour</option>
 						<option value="shopaholic">zakupoholik</option>
 						<option value="religion">strefa sacrum</option>

@@ -8,7 +8,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-
+	<?php
+		$miasto = $_GET['miasto'];
+		$rodzaj = $_GET['rodzaj'];
+		$rodzaj_posilku = $_GET['rodzajposilku'];
+		$transport = $_GET['transport'];
+		$start = $_GET['start'];
+		$end = $_GET['end'];
+	?>
 	
     <div class="cookies"></div>
 
@@ -26,70 +33,39 @@
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 		var fun = ['amusement_park','bowling_alley','casino','movie_theater','stadium']; var funT=3; //3
-		var nature = ['aquarium','park','zoo']; var natureT=2;//2
+		var nuture = ['aquarium','park','zoo']; var natureT=2;//2
 		var art = ['art_gallery']; var artT=2;//2
-		var night = ['bar', 'night_club','cafe', 'restaurant']; var nightT=3;//3
+		var night = ['bar', 'night_club','cafe']; var nightT=3;//3
 		var beauty = ['beauty_salon','hair_care','spa']; var beautyT=3;//3
 		var shopaholic = ['clothing_store','jewelry_store','shopping_mall','shoe_store'];var shopaholicT=3;//3
 		var religion = ['church','hindu_temple','mosque','synagogue']; var religionT=1; //1h
-		var monuments = ['city_hall', 'museum']; var monumentsT = 3;//3
+		var monuments = ['city_hall', 'museum']; var monuments = 3;//3
 		
-		//var cat = '<?php echo $_GET["rodzaj"] ?>';
+		
 		var map;
 		var infowindow;	
 		var result=[];
-		var city ='<?php echo $_GET["miasto"] ?>';
-		var hour1 = new Date("July 21, 1983 <?php echo $_GET['start'] ?>");
-		var hour2 = new Date("July 21, 1983 <?php echo $_GET['end'] ?>");
+		var city = '<?php $_GET['miasto'] ?>';
+		var hour1 = new Date("July 21, 1983 <?php $_GET['start'] ?>");
+		var hour2 = new Date("July 21, 1983 <?php $_GET['end'] ?>");
 		var time_diff = (hour2 - hour1)/1000/60/60-1;
-		var pyrmont=0;// = {lat: 50.049, lng: 19.944};
-		var rynek;// ={lat: 50.062, lng: 19.940};
+		var pyrmont = {lat: 50.049, lng: 19.944};
+		var rynek ={lat: 50.062, lng: 19.940};
 		//pyrmont = rynek;
 		var food='brak';
-    var night_fun=0;
-    var category= <?php echo $_GET["rodzaj"] ?>;
-    var v1=0;
-    var v2=0;
+		var night_fun=0;
+		var category = religion;
 		var num=0;
-    var z;
-    
-
+		var z;
       function initMap() {
         
-        
-  map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 50.062, lng: 19.940},
-            zoom: 15
-          });
 
-  codeAddress();
- 
-		
-		//result = sortPlaces(result);
-		//document.getElementById("demo").innerHTML=result;//.rating;//+result[0].name;
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15
+        });
 
-
-      function codeAddress() {
-        var geocoder = new google.maps.Geocoder();
-    var address = city;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == 'OK') {
-        pyrmont = results[0].geometry.location;
-        
-        
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-      map.setCenter(pyrmont); 
-      
-      v1 = results[0].geometry.location.lat()-0.006;
-      v2 = results[0].geometry.location.lng()-0.004;
-          
-      rynek = new google.maps.LatLng(v1,v2);
-      
-        
-        
-      infowindow = new google.maps.InfoWindow();
+        infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
 		for (var i = 0; i < category.length; ++i) {
         service.nearbySearch({
@@ -99,9 +75,13 @@
 			type: [category[i]]
 		  
         }, callback);
-    }
-    
-          // Instantiate a directions service.
+		}
+		
+		//result = sortPlaces(result);
+		//document.getElementById("demo").innerHTML=result;//.rating;//+result[0].name;
+		
+
+        // Instantiate a directions service.
         var directionsService = new google.maps.DirectionsService;
 
         var directionsDisplay = new google.maps.DirectionsRenderer({map: map});
@@ -109,21 +89,16 @@
         var stepDisplay = new google.maps.InfoWindow;
 
 		// Display the route between the initial start and end selections.
-    calculateAndDisplayRoute(
+        calculateAndDisplayRoute(
             directionsDisplay, directionsService);
-    });
-  }
-    
-
 			
-  }
+      }
 
+		
       function callback(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-          for (var i = 0; i < results.length; i++) {
-            if (results[i] != null)
+          for (var i = 0; i < 3; i++) {
             createMarker(results[i]);
-            
           }
 		  //z = z + results.length;
 		   //result.push(results);
@@ -148,25 +123,26 @@
         });
 
                 var li = document.createElement('li');
-                li.textContent = place.name;
+                li.textContent = place.geometry.location;
                 zmienna.appendChild(li);
 		   //
       }
 	  
-	 // function sortPlaces(result_) {
-		//	return result_.sort(function(a,b){return b.rating - a.rating;});
-	    //}
+	  function sortPlaces(result_) {
+			return result_.sort(function(a,b){return b.rating - a.rating;});
+	    }
 		
 		
 	
 		
 		
-     function calculateAndDisplayRoute(directionsDisplay, directionsService) {
-        /*var waypts=[];
+      function calculateAndDisplayRoute(directionsDisplay, directionsService) {
+            var waypts=[];
             for (var i = 0; i < results.length; i++){
                 var point = document.getElementsByTagName('li')[i].innerHTML;
                 waypts.push(point.slice(2,point.length));
             }
+			//dupa();
         // First, remove any existing markers from the map.
         /*for (var i = 0; i < markerArray.length; i++) {
           markerArray[i].setMap(null);
@@ -174,10 +150,11 @@
 
         // Retrieve the start and end locations and create a DirectionsRequest using
         // WALKING directions.
-       directionsService.route({
-          //origin: rynek,//document.getElementById('start').value,
-          //destination: pyrmont,//document.getElementById('end').value,
-          travelMode: 'WALKING'
+        directionsService.route({
+          origin: waypts[0],//document.getElementById('start').value,
+          destination: waypts[waypts.length],//document.getElementById('end').value,
+          travelMode: 'WALKING',
+          optimizeWaypoints = true;
         }, function(response, status) {
           // Route the directions and pass the response to a function to create
           // markers for each step.
