@@ -2,31 +2,17 @@
 <html>
   <head>
     <title>Simple Click Events</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
   </head>
   <body>
-	<p id="demo"></p>
     <div id="map"></div>
         <script>
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 
-		var fun = [['amusement_park','bowling_alley','casino','movie_theater','stadium'],3]; //3
+	  var fun = [['amusement_park','bowling_alley','casino','movie_theater','stadium'],3]; //3
 		var nuture = [['aquarium','park','zoo'],2];//2
 		var art = [['art_gallery'],2];//2
 		var night = [['bar', 'night_club','cafe'],3];//3

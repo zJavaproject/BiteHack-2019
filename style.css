@@ -8,6 +8,7 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
     font-family: Helvetica, Arial, sans-serif;
+    height: 100%;
 }
 
 .cookies{
@@ -40,7 +41,7 @@ header{
     margin: 0 -220px;
     border-radius: 10px;
     border: solid 3px rgb(31, 152, 223);
-    height: 85%;
+    height: 650px;
 }
 
 #search-box {
@@ -114,19 +115,19 @@ select {
     position: absolute;
     border-top-left-radius: 0.4em;
     border-top-left-radius: 0.4em;
-    height: 100%;
+    height: 650px;
     text-align: center;
 }
 
 #map {
+    height: 650px;
     display: block;
     position: absolute;
     right: 0;
     width: 75%;
-    background-color: rgba(208, 223, 247, 0.76);
     border-top-right-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
-    height: 100%;
+    
 }
 
 ul {
