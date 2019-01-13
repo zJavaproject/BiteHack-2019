@@ -29,10 +29,22 @@ header{
     float: none;
     display: block;
     clear: both;
+    padding: 0 250px;
+    margin: 30px 0;
+}
+
+#content-box {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 -220px;
+    border-radius: 10px;
+    border: solid 3px rgb(31, 152, 223);
+    height: 85%;
 }
 
 #search-box {
-    margin: 250px;
+    margin: 250px 0;
     width: auto;
     border: solid 3px rgb(31, 152, 223);
     border-radius: 75px;
@@ -51,8 +63,9 @@ header{
 #footer-box {
     display: block;
     margin: 0 0;
+    line-height: 0.3;
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
     clear: both;
     text-align: center;
@@ -90,4 +103,43 @@ select {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 20px;
     position: relative;
+}
+
+#plan {
+    display: block;
+    left: 0;
+    width: 25%;
+    background-color: rgba(129, 157, 207, 0.76);
+    position: absolute;
+    border-top-left-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    height: 100%;
+    text-align: center;
+}
+
+#map {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 75%;
+    background-color: rgba(208, 223, 247, 0.76);
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    padding: 10px 5px;
+}
+
+li:hover {
+    color: white;
+    background-color: rgb(31, 152, 223, 0.5);
 }
