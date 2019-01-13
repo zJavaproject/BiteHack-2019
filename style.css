@@ -34,8 +34,7 @@ header{
 #search-box {
     margin: 250px;
     width: auto;
-    border: none;
-    border-style: solid;
+    border: solid 3px rgb(31, 152, 223);
     border-radius: 75px;
     background-color: rgba(208, 223, 247, 0.76);
     clear: both;
@@ -60,10 +59,34 @@ header{
     padding: 0;
 }
 
+form {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
 input {
-    border: 1px, solid, black;
+    border: 1px, solid, rgb(31, 152, 223);
+    margin: 0 20px 5px 0;
     border-radius: 50px;
-    height: 25px;
+    height: 30px;
     padding: 0 10px;
     font-family: Helvetica, Arial, sans-serif; 
+    text-align: center;
+}
+
+input[type=submit] {
+    color: white;
+    background-color: rgb(31, 152, 223);
+    width: auto;
+    padding: 0 30px;
+    text-transform: uppercase;
+}
+
+select {
+    margin: 0 20px 5px 0;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 20px;
+    position: relative;
 }
