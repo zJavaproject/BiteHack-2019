@@ -26,14 +26,20 @@
                         <option value="koscioly">kościoły</option>
                     </select>
                     Rodzaj posiłku: <select name="rodzajposilku">
-                        <option value="brak">Brak posiłku</option>
+                        <option value="brak">brak posiłku</option>
                         <option value="standardowy">standardowy</option>
                         <option value="wegetarianski">wegetariański</option>
                         <option value="weganski">wegański</option>
                         <option value="dietetyczny">dietetyczny</option>
                     </select><br/>
-                    Początek: <input type="time" name="start" value="<?php echo date('h:i'); ?>" />
-                    Koniec: <input type="time" name="end" value="<?php echo date('H:i'); ?>" />
+					Transport: <select name="transport">
+						<option value="pieszo">pieszo</option>
+						<option value="samochod">samochód</option>
+						<option value="rower">rower</option>
+					</select>
+                    Początek: <input type="time" name="start" value="<?php $current_time=date('H:i');
+						echo date('H:i'); ?>" />
+                    Koniec: <input type="time" name="end" value="<?php echo date('H:i', strtotime($current_time. ' + 7 hour')); ?>" />
                     <input type="submit" value="Wyszukaj">
                 </form>
             </div>
@@ -41,7 +47,7 @@
     </div>
     <div id="footer-box">
                 <p>Copyright 2019 by zJava-Project</p>
-                <p>Background photo by rawpixel on Unsplash</p>
+                <p>Background photo by <a href="https://unsplash.com/@rawpixel">rawpixel</a> on <a href="https://unsplash.com/">Unsplash</a></p>
             </div>
 </body>
 </html>
