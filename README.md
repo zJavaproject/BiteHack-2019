@@ -1,6 +1,6 @@
-# BiteHack-2019
+# DayTripper - BITEHack 2019
 
-The project made during BiteHack 2019 - annual hackathon organized by BEST AGH KRAKÓW.
+The project made during BiteHack 2019 - annual hackathon organized by BEST AGH Kraków.
 The topic of this edition was Open Data.
 
 While looking for ideas we came to conclusion that there's no program or app which could made plans of themed, day-long trips around city.
@@ -9,3 +9,5 @@ For example: you wake up in the morning in new city, but you don't have exact pl
 
 Easy? Of course!
 No more boredom during your trips!
+
+Currently project is under rebuilding.
