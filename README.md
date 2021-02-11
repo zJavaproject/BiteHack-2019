@@ -1,4 +1,4 @@
-# DayTripper - BITEHack 2019
+# DayTripper :world_map: - BITEHack 2019
 
 The project made during BiteHack 2019 - annual hackathon organized by BEST AGH Kraków.
 The topic of this edition was Open Data.
