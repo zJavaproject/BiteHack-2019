@@ -10,4 +10,6 @@ For example: you wake up in the morning in new city, but you don't have exact pl
 Easy? Of course!
 No more boredom during your trips!
 
-Currently project is under rebuilding.
+# Achievements
+
+:trophy: Top 10 of all projects and qualification to the next round of the event
